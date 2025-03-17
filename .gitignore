@@ -4,3 +4,4 @@ cypress/accessibilityResults/*
 
 cypress/reports/mochawesome-report/*
 
+.DS_Store
