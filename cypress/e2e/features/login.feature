@@ -17,7 +17,7 @@ Feature: User Login
     When I enter the username for "adminUser"
     And I enter the password for "adminUser"
     And I click the login button
-   Then I should be redirected to the dashboard page
+    Then I should be redirected to the dashboard page
 
   # Scenario: Login with invalid credentials
   #   When I enter the username "invalid_user"
