@@ -3,6 +3,16 @@ const cucumber = require("cypress-cucumber-preprocessor").default;
 const fs = require("fs");
 
 module.exports = defineConfig({
+
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    reportDir: 'cypress/reports/mochawesome-report',
+    overwrite: false,
+    html: true,
+    json: true,
+    charts: true
+  },
+
   viewportWidth: 1920,
   viewportHeight: 1080,
 
@@ -17,6 +27,8 @@ module.exports = defineConfig({
 
   e2e: {
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+      
       on("file:preprocessor", cucumber());
 
       on('task', {

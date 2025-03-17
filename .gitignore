@@ -2,3 +2,5 @@ node_modules
 
 cypress/accessibilityResults/*
 
+cypress/reports/mochawesome-report/*
+
